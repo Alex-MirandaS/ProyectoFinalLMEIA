@@ -1,0 +1,148 @@
+use eCommerce
+
+db.createCollection('users');
+
+db.user.insert({
+    idUser: "E1",
+    name: "Alex Miranda",
+    password: "admin123",
+    rol: "Admin",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E1",
+    name: "Alex Miranda",
+    password: "admin123",
+    rol: "Admin",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E2",
+    name: "Alison Alfaro",
+    password: "contra123",
+    rol: "Common",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E3",
+    name: "Fredy de León",
+    password: "contra123",
+    rol: "Common",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E4",
+    name: "Jaylene Gonzales",
+    password: "contra123",
+    rol: "Common",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E5",
+    name: "Wilson Chojolan",
+    password: "contra123",
+    rol: "Common",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E6",
+    name: "Dick Grayson",
+    password: "contra123",
+    rol: "Common",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E7",
+    name: "Diego Estrada",
+    password: "contra123",
+    rol: "Package",
+    wallet: 0.00
+});
+
+db.users.insert({
+    idUser: "E8",
+    name: "Anthony Ordonez",
+    password: "contra123",
+    rol: "Package",
+    wallet: 0.00
+});
+
+db.createCollection('category_products');
+
+db.category_products.insert({
+    nameCategory: "Tecnología",
+});
+
+db.category_products.insert({
+    nameCategory: "Hogar",
+});
+
+db.category_products.insert({
+    nameCategory: "Académico",
+});
+
+db.category_products.insert({
+    nameCategory: "Literatura",
+});
+
+db.category_products.insert({
+    nameCategory: "Decoración",
+});
+
+db.category_products.insert({
+    nameCategory: "Otros",
+});
+
+db.createCollection('products');
+
+db.products.insert({
+    idProduct: "P1",
+    idOwner: "E6",
+    productName: "Buds Essencial",
+    price: 100.00,
+    category: "Tecnología",
+    description: "Audífonos Inalámbricos, Marca Xiamoi"
+});
+
+db.createCollection('list_orders');
+
+db.list_orders.insert({
+    idLOrders: "LO1",
+    idUser: "E5",
+    date: "27-04-2023",
+    deadline: "02-05-2023",
+    total: 100.00,
+    status: "en curso"
+});
+
+db.createCollection('orders');
+
+db.orders.insert({
+    idLOrders: "LO1",
+    idProduct: "P1",
+    amount: 1
+});
+
+db.createCollection('catalogues');
+
+db.catalogues.insert({
+    idProduct: "P1",
+    status: "accepted"
+});
+
+db.createCollection('shop_bags');
+
+db.shop_bags.insert({
+    idUser: "E5",
+    idProduct: "P1",
+    amount: 1
+});
+
+//FALTA EL SHOPBAG
