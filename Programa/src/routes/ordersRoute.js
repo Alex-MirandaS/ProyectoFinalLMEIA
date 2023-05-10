@@ -36,4 +36,80 @@ router.post('/addOrders', async function(request, response) {
     console.log(request.body);
 });
 
+router.get('/getListOrders/:idUser', async function(request, response) {
+
+    const arraylistOrders = await listOrders.find({ idUser: request.params.idUser });
+    const array = [];
+    for (let index = 0; index < arraylistOrders.length; index++) {
+        const temp = arraylistOrders[index];
+
+        const listOrder = {
+            numOrder: temp.idLOrders,
+            fechaEntrega: temp.date,
+            fechaLlegada: temp.deadline,
+            total: temp.total,
+            estado: temp.status
+        }
+
+        array.push(listOrder);
+    }
+    console.log(arraylistOrders);
+    response.json(array);
+});
+
+router.get('/getListOrdersInCurs', async function(request, response) {
+
+    const arraylistOrders = await listOrders.find({ status: 'en curso' });
+    const array = [];
+    for (let index = 0; index < arraylistOrders.length; index++) {
+        const temp = arraylistOrders[index];
+
+        const listOrder = {
+            numOrder: temp.idLOrders,
+            fechaEntrega: temp.date,
+            fechaLlegada: temp.deadline,
+            total: temp.total,
+            estado: temp.status
+        }
+
+        array.push(listOrder);
+    }
+    console.log(array);
+    response.json(array);
+});
+
+router.get('/getListOrdersEntreg', async function(request, response) {
+
+    const arraylistOrders = await listOrders.find({ status: 'entregado' });
+    const array = [];
+    for (let index = 0; index < arraylistOrders.length; index++) {
+        const temp = arraylistOrders[index];
+
+        const listOrder = {
+            numOrder: temp.idLOrders,
+            fechaEntrega: temp.date,
+            fechaLlegada: temp.deadline,
+            total: temp.total,
+            estado: temp.status
+        }
+
+        array.push(listOrder);
+    }
+    console.log(array);
+    response.json(array);
+});
+
+router.post('/changeStatus', async function(request, response) {
+
+    const listOrderTemp = await listOrders.updateOne({
+        idLOrders: request.body.idLOrders
+    }, {
+        "$set": {
+            status: 'entregado'
+        }
+    });
+
+    response.json({ status: 'entregado' });
+})
+
 module.exports = router;
