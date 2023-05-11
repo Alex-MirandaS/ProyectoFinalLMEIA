@@ -2,10 +2,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idUser = urlParams.get('data1');
 const idLOrders = urlParams.get('data2');
-var agProduct = document.getElementById('addProduct');
-var listOrders = document.getElementById('listOrders');
-var home = document.getElementById("home");
-var carrito = document.getElementById('carrito');
+var pedidos = document.getElementById('pedidos');
+var entregados = document.getElementById('entregados');
+var solIngreso = document.getElementById('aprobarProduct');
 //IMPORTS DEL SCRIPT  
 var container = document.getElementById("container");
 var containerTitle = document.getElementById("containerTitle");
@@ -40,12 +39,6 @@ function fillOrders() {
         .catch(error => console.error(error))
 }
 
-carrito.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.href = "http://127.0.0.1:5500/Programa/src/views/HTML/MainPage/carrito.html?data=" + idUser;
-
-})
-
 function fillTitle() {
     let template = templateTitle.content.cloneNode(true);
     let numOrder = template.getElementById('numOrder');
@@ -55,9 +48,9 @@ function fillTitle() {
 }
 
 function fillInitial() {
-    home.href = "http://127.0.0.1:5500/Programa/src/views/HTML/MainPage/home.html?data=" + idUser;
-    agProduct.href = "http://127.0.0.1:5500/Programa/src/views/HTML/MainPage/addProduct.html?data=" + idUser;
-    listOrders.href = "http://127.0.0.1:5500/Programa/src/views/HTML/MainPage/listOrders.html?data=" + idUser;
+    pedidos.href = "http://127.0.0.1:5500/Programa/src/views/HTML/Package/pedidos.html?data=" + idUser;
+    entregados.href = "http://127.0.0.1:5500/Programa/src/views/HTML/Package/entregados.html?data=" + idUser;
+    solIngreso.href = "http://127.0.0.1:5500/Programa/src/views/HTML/Package/solicitudIngreso.html?data=" + idUser;
 }
 
 fillTitle();

@@ -28,6 +28,11 @@ function fillListOrders() {
                 fechaEntrada.innerHTML = temp.fechaEntrega + ' / ';
                 fechaSalida.innerHTML = temp.fechaLlegada;
 
+                detalles.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = "http://127.0.0.1:5500/Programa/src/views/HTML/Package/detailsListPackage.html?data1=" + idUser + "&data2=" + temp.numOrder;
+                })
+
                 containerProducts.appendChild(template);
             }
         })

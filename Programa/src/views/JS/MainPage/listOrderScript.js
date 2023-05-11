@@ -29,9 +29,13 @@ function fillListOrders() {
                     fechaEntrega.innerHTML = temp.fechaLlegada,
                     total.innerHTML = 'Q' + temp.total,
                     status.innerHTML = temp.estado,
-                    //detailsProduct.href = 
 
-                    container.appendChild(template);
+                    detailsProduct.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        window.location.href = "http://127.0.0.1:5500/Programa/src/views/HTML/MainPage/detailsList.html?data1=" + idUser + "&data2=" + temp.numOrder;
+                    })
+
+                container.appendChild(template);
             }
         })
         .catch(error => console.error(error));

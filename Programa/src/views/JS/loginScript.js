@@ -35,7 +35,7 @@ function log() {
                 } else if (response.rol == 'Package') {
                     window.location.replace('http://127.0.0.1:5500/Programa/src/views/HTML/Package/pedidos.html?data=' + response.idUser);
                 } else if (response.rol == 'Admin') {
-                    window.location.replace('http://127.0.0.1:5500/Programa/src/views/HTML/Admin/home.html?data=' + response.idUser);
+                    window.location.replace('http://127.0.0.1:5500/Programa/src/views/HTML/Admin/reportes.html?data=' + response.idUser);
                 }
             } else {
                 alert('Usuario o Contraseña Incorrecta');

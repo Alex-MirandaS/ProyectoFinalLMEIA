@@ -1,0 +1,69 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nuevo Usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- burbujas -->
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="../../CSS/addProduct.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../CSS/productStyles.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- //web font -->
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <h8 class="navbar-brand">eCommerce</h8>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 ">
+                    <li class="nav-item"><a id="reportes" class="nav-link active" aria-current="page" href="#!">Reportes</a></li>
+                    <li id="orders" class="nav-item"><a id="newUser" class="nav-link" href="#!">Nuevo Usuario</a></li>
+                    <li id="orders" class="nav-item"><a id="editUser" class="nav-link" href="#!">Editar Usuario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main class="text" -->
+    <div class="py-5">
+        <h1 class="display-4 fw-bolder">Crear Nuevo Usuario</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form>
+                    <input id="username" class="btn btn-outline-dark mt-auto" type="text" name="productName" placeholder="Nombre de Usuario" required="">
+                    <input id="password" type="password" class="btn btn-outline-dark mt-auto" name="price" placeholder="Contraseña" required="">
+                    <input id="confirmpassword" type="password" class="btn btn-outline-dark mt-auto" name="price" placeholder="Confirmar la Contraseña" required="">
+                    <div id="contenedor">
+                        <template id="templateTypeUsers">
+                            <select id="typeUsers"></select>
+                        </template>
+                    </div>
+                    <input id="button" class="btn btn-outline-dark " type="submit" value="Registrar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../JS/Admin/newUserScript.js"></script>
+</body>
+
+</html>

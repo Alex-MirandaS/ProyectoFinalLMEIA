@@ -3,6 +3,7 @@ const controlD = require('../controladores/controlDate');
 const controlG = require('../controladores/controlGeneral');
 const listOrders = require('../models/listOrders');
 const Orders = require('../models/orders');
+const Products = require('../models/products');
 const router = express.Router();
 //POST : INSERTAR COSAS
 //NOTA, SE ENVIA EL JSON DE LISTORDER PRIMERO, LUEGO LOS ORDERS
@@ -57,6 +58,27 @@ router.get('/getListOrders/:idUser', async function(request, response) {
     response.json(array);
 });
 
+router.get('/getOrders/:idLOrders', async function(request, response) {
+
+    const arrayOrders = await Orders.find({ idLOrders: request.params.idLOrders });
+    const array = [];
+    for (let index = 0; index < arrayOrders.length; index++) {
+        const temp = arrayOrders[index];
+        const productTemp = await Products.findOne({ idProduct: temp.idProduct });
+        const order = {
+            sku: productTemp.idProduct,
+            nameProduct: productTemp.productName,
+            description: productTemp.description,
+            amount: temp.amount,
+            total: 'Q' + (temp.amount * productTemp.price)
+        }
+
+        array.push(order);
+    }
+    console.log(array);
+    response.json(array);
+});
+
 router.get('/getListOrdersInCurs', async function(request, response) {
 
     const arraylistOrders = await listOrders.find({ status: 'en curso' });
@@ -96,6 +118,7 @@ router.get('/getListOrdersEntreg', async function(request, response) {
         array.push(listOrder);
     }
     console.log(array);
+    00
     response.json(array);
 });
 

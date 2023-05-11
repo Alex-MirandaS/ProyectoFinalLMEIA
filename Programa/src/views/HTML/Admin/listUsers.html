@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Table 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../../CSS/listOrderStyle.css">
+    <link rel="stylesheet" href="../../CSS/homeStyles.css">
+
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <h8 class="navbar-brand">eCommerce</h8>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 ">
+                    <li class="nav-item"><a id="reportes" class="nav-link active" aria-current="page" href="#!">Reportes</a></li>
+                    <li id="orders" class="nav-item"><a id="newUser" class="nav-link" href="#!">Nuevo Usuario</a></li>
+                    <li id="orders" class="nav-item"><a id="editUser" class="nav-link" href="#!">Editar Usuario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section" id="nameReport">Usuarios</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                        <table class="table">
+                            <thead class="thead-primary" id="containerColumns">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Contraseña</th>
+                                    <th>Rol</th>
+                                    <th>Cartera</th>
+                                    <th>Editar Información</th>
+                                </tr>
+                            </thead>
+                            <tbody id="container">
+                                <template id="templateUsers">
+                                <tr> 
+                                    <th id="id" scope="row">1</th>
+                                    <th id="name">1</th>
+                                    <td id="password">Mark</td>
+                                    <td id="rol">Otto</td>
+                                    <td id="wallet">Otto</td>
+                                    <td><button id="editInfo" class="btn btn-outline-dark ">Editar</button></td>
+                                </tr>
+                            </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../JS/Admin/listUserScript.js"></script>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 //RUTAS
-const ruta1 = require('./routes/ruta1');
+const reportsRoute = require('./routes/reportsRoute');
 const userRoutes = require('./routes/userRoute');
 const productsRoutes = require('./routes/productsRoute');
 const shopBagsRoutes = require('./routes/shopBagsRoute');
@@ -33,18 +33,8 @@ async function start() {
     }
 }
 start();
-//METODO SET
-/*
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'))
-    //METODO GET
-app.get('/', function(request, response) {
-    console.log('RESPUESTA DEL SERVIDOR');
-    response.send('ESTA ES LA RESPUESTA')
-});
-*/
 //USO DE RUTAS
-app.use('/api', ruta1);
+app.use('/api', reportsRoute);
 app.use('/api', userRoutes);
 app.use('/api', productsRoutes);
 app.use('/api', shopBagsRoutes);
