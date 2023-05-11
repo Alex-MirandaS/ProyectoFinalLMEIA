@@ -28,7 +28,6 @@ function fillListOrders() {
 
                 buyButton.addEventListener('click', (e) => {
                     e.preventDefault();
-
                     const data = {
                         idUser: idUser
                     }

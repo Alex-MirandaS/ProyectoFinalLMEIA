@@ -36,7 +36,7 @@ router.post('/addCommonUser', async function(request, response) {
         name: request.body.name,
         password: request.body.password,
         rol: "Common",
-        wallet: 500
+        wallet: 5000
     });
     const insertUser = await insert.save();
     response.json(insertUser);

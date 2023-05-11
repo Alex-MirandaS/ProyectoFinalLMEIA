@@ -11,19 +11,11 @@ db.user.insert({
 });
 
 db.users.insert({
-    idUser: "E1",
-    name: "Alex Miranda",
-    password: "admin123",
-    rol: "Admin",
-    wallet: 0.00
-});
-
-db.users.insert({
     idUser: "E2",
     name: "Alison Alfaro",
     password: "contra123",
     rol: "Common",
-    wallet: 0.00
+    wallet: 5000.00
 });
 
 db.users.insert({
@@ -31,7 +23,7 @@ db.users.insert({
     name: "Fredy de León",
     password: "contra123",
     rol: "Common",
-    wallet: 0.00
+    wallet: 5000.00
 });
 
 db.users.insert({
@@ -39,7 +31,7 @@ db.users.insert({
     name: "Jaylene Gonzales",
     password: "contra123",
     rol: "Common",
-    wallet: 0.00
+    wallet: 5000.00
 });
 
 db.users.insert({
@@ -47,7 +39,7 @@ db.users.insert({
     name: "Wilson Chojolan",
     password: "contra123",
     rol: "Common",
-    wallet: 0.00
+    wallet: 5000.00
 });
 
 db.users.insert({
@@ -55,7 +47,7 @@ db.users.insert({
     name: "Dick Grayson",
     password: "contra123",
     rol: "Common",
-    wallet: 0.00
+    wallet: 5000.00
 });
 
 db.users.insert({
@@ -111,6 +103,507 @@ db.products.insert({
     description: "Audífonos Inalámbricos, Marca Xiamoi"
 });
 
+db.products.insertMany([{
+        idProduct: "P2",
+        idOwner: "E2",
+        productName: "Samsung Galaxy S21",
+        price: 999,
+        category: "Tecnología",
+        description: "The latest flagship smartphone from Samsung.",
+    },
+    {
+        idProduct: "P3",
+        idOwner: "E2",
+        productName: "Echo Dot (4th Gen)",
+        price: 49,
+        category: "Hogar",
+        description: "A smart speaker with Alexa.",
+    },
+    {
+        idProduct: "P4",
+        idOwner: "E2",
+        productName: "iPad Pro",
+        price: 1099,
+        category: "Académico",
+        description: "A powerful tablet for work and play.",
+    },
+    {
+        idProduct: "P5",
+        idOwner: "E2",
+        productName: "The Lord of the Rings Boxed Set",
+        price: 59,
+        category: "Literatura",
+        description: "A classic epic fantasy series.",
+    },
+    {
+        idProduct: "P6",
+        idOwner: "E2",
+        productName: "Instant Pot Duo Nova",
+        price: 119,
+        category: "Hogar",
+        description: "A versatile multi-cooker.",
+    },
+    {
+        idProduct: "P7",
+        idOwner: "E2",
+        productName: "Philips Sonicare Toothbrush",
+        price: 99,
+        category: "Hogar",
+        description: "An electric toothbrush with multiple settings.",
+    },
+    {
+        idProduct: "P8",
+        idOwner: "E2",
+        productName: "Waterproof Bluetooth Speaker",
+        price: 29,
+        category: "Decoracion",
+        description: "A portable speaker for outdoor activities.",
+    },
+    {
+        idProduct: "P9",
+        idOwner: "E2",
+        productName: "Wireless Charging Pad",
+        price: 19,
+        category: "Tecnología",
+        description: "A convenient way to charge your devices.",
+    },
+    {
+        idProduct: "P10",
+        idOwner: "E2",
+        productName: "Leather Journal",
+        price: 39,
+        category: "Otros",
+        description: "A beautiful notebook for writing or sketching.",
+    },
+    {
+        idProduct: "P11",
+        idOwner: "E2",
+        productName: "Cuisinart Coffee Maker",
+        price: 129,
+        category: "Hogar",
+        description: "A programmable coffee maker with a built-in grinder.",
+    }
+]);
+db.products.insertOne({
+    idProduct: "P12",
+    idOwner: "E3",
+    productName: "Macbook Pro",
+    price: 1499.99,
+    category: "Tecnología",
+    description: "A powerful and portable laptop for professionals",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P13",
+    idOwner: "E3",
+    productName: "Amazon Echo",
+    price: 99.99,
+    category: "Hogar",
+    description: "A smart speaker with Alexa voice assistant",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P14",
+    idOwner: "E3",
+    productName: "Arduino Starter Kit",
+    price: 49.99,
+    category: "Académico",
+    description: "A kit to learn electronics and programming with Arduino",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P15",
+    idOwner: "E3",
+    productName: "The Great Gatsby",
+    price: 12.99,
+    category: "Literatura",
+    description: "A classic novel by F. Scott Fitzgerald",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P16",
+    idOwner: "E3",
+    productName: "Nest Thermostat",
+    price: 249.99,
+    category: "Hogar",
+    description: "A smart thermostat that learns your preferences",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P17",
+    idOwner: "E3",
+    productName: "Succulent Plant",
+    price: 9.99,
+    category: "Decoracion",
+    description: "A low-maintenance plant for your home or office",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P18",
+    idOwner: "E3",
+    productName: "Stainless Steel Water Bottle",
+    price: 19.99,
+    category: "Otros",
+    description: "A durable and eco-friendly water bottle",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P19",
+    idOwner: "E3",
+    productName: "Canon EOS Rebel T7 DSLR Camera",
+    price: 499.99,
+    category: "Tecnología",
+    description: "A beginner-friendly camera for aspiring photographers",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P20",
+    idOwner: "E3",
+    productName: "Air Purifier",
+    price: 149.99,
+    category: "Hogar",
+    description: "A device that removes contaminants from the air",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P21",
+    idOwner: "E3",
+    productName: "Dumbbell Set",
+    price: 59.99,
+    category: "Otros",
+    description: "A set of adjustable dumbbells for home workouts",
+    when: new Date()
+})
+
+db.products.insertOne({
+    idProduct: "P22",
+    idOwner: "E4",
+    productName: "LG OLED TV",
+    price: 1499.99,
+    category: "Tecnología",
+    description: "A 55-inch OLED TV with 4K resolution and HDR support"
+})
+
+db.products.insertOne({
+    idProduct: "P23",
+    idOwner: "E4",
+    productName: "Instant Pot Duo",
+    price: 99.99,
+    category: "Hogar",
+    description: "A 7-in-1 multi-cooker for easy and fast meal preparation"
+})
+
+db.products.insertOne({
+    idProduct: "P24",
+    idOwner: "E4",
+    productName: "Introduction to Machine Learning",
+    price: 39.99,
+    category: "Académico",
+    description: "A beginner's guide to machine learning and artificial intelligence"
+})
+
+db.products.insertOne({
+    idProduct: "P25",
+    idOwner: "E4",
+    productName: "The Great Gatsby",
+    price: 12.99,
+    category: "Literatura",
+    description: "A classic novel by F. Scott Fitzgerald"
+})
+
+db.products.insertOne({
+    idProduct: "P26",
+    idOwner: "E4",
+    productName: "Nest Learning Thermostat",
+    price: 249.99,
+    category: "Hogar",
+    description: "A smart thermostat that learns your habits and saves energy"
+})
+
+db.products.insertOne({
+    idProduct: "P27",
+    idOwner: "E4",
+    productName: "Succulent Plant Set",
+    price: 29.99,
+    category: "Decoracion",
+    description: "A set of 3 beautiful succulent plants in stylish pots"
+})
+
+db.products.insertOne({
+    idProduct: "P28",
+    idOwner: "E4",
+    productName: "GoPro HERO8 Black",
+    price: 349.99,
+    category: "Tecnología",
+    description: "A high-performance action camera for recording your adventures"
+})
+
+db.products.insertOne({
+    idProduct: "P29",
+    idOwner: "E4",
+    productName: "The Power of Now",
+    price: 14.99,
+    category: "Literatura",
+    description: "A guide to spiritual enlightenment by Eckhart Tolle"
+})
+
+db.products.insertOne({
+    idProduct: "P30",
+    idOwner: "E4",
+    productName: "Resistance Band Set",
+    price: 24.99,
+    category: "Otros",
+    description: "A set of 5 exercise bands for strength training and stretching"
+})
+
+db.products.insertOne({
+    idProduct: "P31",
+    idOwner: "E4",
+    productName: "Rustic Wall Art Decor",
+    price: 39.99,
+    category: "Decoracion",
+    description: "A set of 3 wooden wall art pieces with inspirational quotes"
+})
+
+db.products.insertOne({
+    idProduct: "P32",
+    idOwner: "E5",
+    productName: "Smartphone",
+    price: 599.99,
+    category: "Tecnología",
+    description: "Nuevo modelo con pantalla OLED y cámara de 64MP"
+})
+
+db.products.insertOne({
+    idProduct: "P33",
+    idOwner: "E5",
+    productName: "Mesa de comedor",
+    price: 799.99,
+    category: "Decoracion",
+    description: "Mesa de madera maciza con capacidad para 8 personas"
+})
+
+db.products.insertOne({
+    idProduct: "P34",
+    idOwner: "E5",
+    productName: "Libro de cocina",
+    price: 29.99,
+    category: "Literatura",
+    description: "Recetas fáciles y rápidas para el día a día"
+})
+
+db.products.insertOne({
+    idProduct: "P35",
+    idOwner: "E5",
+    productName: "Juego de sábanas",
+    price: 89.99,
+    category: "Hogar",
+    description: "Sábanas de algodón egipcio con 400 hilos"
+})
+
+db.products.insertOne({
+    idProduct: "P36",
+    idOwner: "E5",
+    productName: "Impresora",
+    price: 149.99,
+    category: "Tecnología",
+    description: "Impresora multifuncional de inyección de tinta"
+})
+
+db.products.insertOne({
+    idProduct: "P37",
+    idOwner: "E5",
+    productName: "Silla de oficina",
+    price: 299.99,
+    category: "Decoracion",
+    description: "Silla ergonómica con soporte lumbar ajustable"
+})
+
+db.products.insertOne({
+    idProduct: "P38",
+    idOwner: "E5",
+    productName: "Calculadora científica",
+    price: 49.99,
+    category: "Académico",
+    description: "Calculadora con funciones avanzadas para cálculos complejos"
+})
+
+db.products.insertOne({
+    idProduct: "P39",
+    idOwner: "E5",
+    productName: "Vestido",
+    price: 129.99,
+    category: "Otros",
+    description: "Vestido de seda con estampado floral"
+})
+
+db.products.insertOne({
+    idProduct: "P40",
+    idOwner: "E5",
+    productName: "Altavoz Bluetooth",
+    price: 79.99,
+    category: "Tecnología",
+    description: "Altavoz portátil con conexión Bluetooth y batería de larga duración"
+})
+
+db.products.insertOne({
+    idProduct: "P41",
+    idOwner: "E5",
+    productName: "Lámpara de mesa",
+    price: 49.99,
+    category: "Decoracion",
+    description: "Lámpara de mesa con pantalla de cristal opalino"
+})
+
+db.products.insertOne({
+    "idProduct": "P42",
+    "idOwner": "E6",
+    "productName": "Smartwatch",
+    "price": 200,
+    "category": "Tecnología",
+    "description": "A smartwatch with multiple features"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P42",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P43",
+    "idOwner": "E6",
+    "productName": "Air Fryer",
+    "price": 150,
+    "category": "Hogar",
+    "description": "A kitchen appliance for healthy cooking"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P43",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P44",
+    "idOwner": "E6",
+    "productName": "Programming in Java",
+    "price": 50,
+    "category": "Académico",
+    "description": "A book for learning Java programming"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P44",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P45",
+    "idOwner": "E6",
+    "productName": "Desk Lamp",
+    "price": 30,
+    "category": "Decoracion",
+    "description": "A lamp for your desk"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P45",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P46",
+    "idOwner": "E6",
+    "productName": "Harry Potter and the Sorcerer's Stone",
+    "price": 15,
+    "category": "Literatura",
+    "description": "The first book in the Harry Potter series"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P46",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P47",
+    "idOwner": "E6",
+    "productName": "Smart Speaker",
+    "price": 100,
+    "category": "Tecnología",
+    "description": "A speaker with voice assistant"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P47",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P48",
+    "idOwner": "E6",
+    "productName": "Wine Glasses",
+    "price": 40,
+    "category": "Decoracion",
+    "description": "A set of wine glasses"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P48",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P49",
+    "idOwner": "E6",
+    "productName": "Tablet",
+    "price": 300,
+    "category": "Tecnología",
+    "description": "A tablet for work and entertainment"
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P49",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P50",
+    "idOwner": "E6",
+    "productName": "Oil painting",
+    "price": 999.99,
+    "category": "Decoracion",
+    "description": "A breathtaking oil painting by a talented artist."
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P50",
+    "status": "inProcess"
+});
+
+db.products.insertOne({
+    "idProduct": "P51",
+    "idOwner": "E6",
+    "productName": "Guitar",
+    "price": 349.99,
+    "category": "Otros",
+    "description": "A high-quality guitar for musicians of all levels."
+});
+
+db.catalogues.insertOne({
+    "idProduct": "P51",
+    "status": "inProcess"
+});
+
 db.createCollection('list_orders');
 
 db.list_orders.insert({
@@ -136,6 +629,181 @@ db.catalogues.insert({
     idProduct: "P1",
     status: "accepted"
 });
+
+
+db.catalogues.insertMany([{
+        idProduct: "P2",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P3",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P4",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P5",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P6",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P7",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P8",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P9",
+        status: "inProcess"
+    },
+    {
+        idProduct: "P10",
+        status: "inProcess"
+    }
+])
+
+db.catalogues.insertOne({
+    idProduct: "P12",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P13",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P14",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P15",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P16",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P17",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P18",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P19",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P20",
+    status: "inProcess"
+})
+db.catalogues.insertOne({
+    idProduct: "P21",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P22",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P23",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P24",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P25",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P26",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P27",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P28",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P29",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P30",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    idProduct: "P31",
+    status: "inProcess"
+})
+
+db.catalogues.insertOne({
+    "idProduct": "P32",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P33",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P34",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P35",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P36",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P37",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P38",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P39",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P40",
+    "status": "inProcess"
+});
+db.catalogues.insertOne({
+    "idProduct": "P41",
+    "status": "inProcess"
+});
+
+
+
 
 db.createCollection('shop_bags');
 
